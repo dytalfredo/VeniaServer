@@ -2,79 +2,7 @@
 import FeatureSolution from "../components/FeatureSolution.astro";
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
-import type { ISourceOptions } from "tsparticles-engine";
-import Particles from "astro-particles";
-const options = {
-	fullScreen: {
-		zIndex: -1,
-	},
-	particles: {
-		number: {
-			value: 50,
-		},
-		links: {
-			enable: true,
-		},
-		move: {
-			enable: true,
-		},
-	},
-	themes: [
-		{
-			name: "light",
-			default: {
-				value: true,
-				auto: true,
-				mode: "light",
-			},
-			options: {
-				background: {
-					color: "#ffffff",
-				},
-				particles: {
-					color: {
-						value: "#ffffff",
-					},
-					links: {
-						color: "#000000",
-					},
-				},
-			},
-		},
-		{
-			name: "dark",
-			default: {
-				value: true,
-				auto: true,
-				mode: "dark",
-			},
-			options: {
-				background: {
-					color: "#000000",
-				},
-				particles: {
-					color: {
-						value: "#ffffff",
-					},
-					links: {
-						color: "#ffffff",
-					},
-				},
-			},
-		},
-	],
-};
 ---
-
-<script>
-	import { type Engine, tsParticles } from "tsparticles-engine";
-	import { loadFull } from "tsparticles";
-
-	globalThis.particlesInit = async (engine: Engine) => {
-		await loadFull(engine);
-	};
-	console.log("HELLO WORD");
-</script>
 
 <Layout
 	title="Bienvenidos a la pagina de construccion de Venia.dev ."
@@ -83,12 +11,7 @@ const options = {
 >
 	<main>
 		<Menu />
-		<Particles
-			id="tsparticles"
-			options={options}
-			init="particlesInit"
-			class="absolute z-20"
-		/>
+
 		<section
 			class="bg-[#030303] flex flex-wrap gap-8 justify-center items-center content-end h-screen w-screen"
 		>
