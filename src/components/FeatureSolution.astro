@@ -1,0 +1,27 @@
+---
+interface Props {
+    delay: string;
+    img: string;
+}
+
+const { delay, img } = Astro.props;
+---
+
+<a
+    href="/ArTecnologia"
+    class=`btn z-10  h-[24rem] bg-[#030303] text-[#fae7a7] border-transparent shadow-sm shadow-purple-700 animate-float ${delay} flex flex-col hover:bg-[#11060f] `
+>
+    <img
+        class="h-4/6"
+        src=`${img}`
+        alt="
+        "
+        decoding="async"
+        loading="lazy"
+        alt="A description of my image."
+    />
+    <div class="rounded-lg p-2">
+        <h2 class="text-lg">AR TECNOLOGI</h2>
+        <span class="lowercase">Realidad Aumentada</span>
+    </div>
+</a>

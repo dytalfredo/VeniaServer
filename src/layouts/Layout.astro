@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+	modeTheme: string;
+}
+import { ViewTransitions } from "astro:transitions";
+const { title, modeTheme } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Venia.dev descripcion" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<html data-theme={modeTheme}></html>
+		<title>{title}</title>
+		<ViewTransitions />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Pridi:wght@200&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: "Josefin Sans", sans-serif;
+	}
+</style>

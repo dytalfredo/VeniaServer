@@ -1,0 +1,7 @@
+---
+const factResponse = await fetch("https://catfact.ninja/fact");
+const factData = await factResponse.json();
+export const prerender = true;
+---
+
+<p>{factData.fact}</p>
