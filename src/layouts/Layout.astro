@@ -3,7 +3,7 @@ interface Props {
 	title: string;
 	modeTheme: string;
 }
-import { ViewTransitions } from "astro:transitions";
+
 const { title, modeTheme } = Astro.props;
 ---
 
@@ -17,7 +17,7 @@ const { title, modeTheme } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<html data-theme={modeTheme}></html>
 		<title>{title}</title>
-		<ViewTransitions />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
